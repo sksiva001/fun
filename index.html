@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Dosis', sans-serif;;
+
+            display: grid;
+            place-items: center;
+
+            font-size: 5rem;
+            font-weight: bold;
+
+            height: 100vh;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <marquee direction="left"></marquee>
+    <p></p>
+    <marquee behavior="" direction="right">asdf</marquee>
+</body>
+
+<script>
+    const text = prompt('Enter something')
+
+    for(let i of document.body.children){
+
+        i.textContent = text.toUpperCase()
+    }
+
+    if(text.length) {
+        setInterval(() => {
+            const color = document.body.style.backgroundColor
+            document.body.style.color = color
+            document.body.style.backgroundColor = color === 'black' ? 'white' : 'black'
+        }, 100)
+    }
+</script>
+
+
+</html>
