@@ -15,36 +15,48 @@
             display: grid;
             place-items: center;
 
-            font-size: 5rem;
+            font-size: 6rem;
             font-weight: bold;
 
             height: 100vh;
-            background-color: black;
-            color: white;
+            background-color: rgba(41, 38, 38, 0.767);
+            color: rgba(255, 255, 255, 0.683);
         }
+
+        img{
+            width: 340px;
+            height: 240px;
+            aspect-ratio: 16/9;
+            border-radius: 5px;
+            box-shadow: 5px 5px 15px #ccc;
+        }
+
     </style>
 </head>
 <body>
-    <marquee direction="left"></marquee>
-    <p></p>
-    <marquee behavior="" direction="right">asdf</marquee>
+    <marquee direction="left" scrollamount="20">
+        <img src="1.jpg" />
+        <img src="2.jpg" />
+        <img src="3.jpg" />
+    </marquee>
+    
+    <p>MBMK</p>
+    
+    
+    <marquee direction="right" scrollamount="20">
+        <img src="1.jpg" />
+        <img src="2.jpg" />
+        <img src="3.jpg" />
+    </marquee>
 </body>
 
 <script>
-    const text = prompt('Enter something')
 
-    for(let i of document.body.children){
-
-        i.textContent = text.toUpperCase()
-    }
-
-    if(text.length) {
         setInterval(() => {
             const color = document.body.style.backgroundColor
             document.body.style.color = color
             document.body.style.backgroundColor = color === 'black' ? 'white' : 'black'
         }, 100)
-    }
 </script>
 
 
